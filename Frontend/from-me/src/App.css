@@ -1,0 +1,26 @@
+body{
+  background: linear-gradient(to right, #a8edea, #fed6e3);
+}
+
+#white-line {
+    border: none; 
+    background-color: white; 
+    height: 10px; 
+    margin: 20px 0; 
+}
+
+.bg-apple{
+  background: #A8E4A0;
+}
+
+.bg-blueberry{
+  background: #4f86f7;
+}
+
+.bg-lemon{
+  background: #F6E199;
+}
+
+.bg-apricot{
+  background: #F3A76B;
+}
