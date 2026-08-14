@@ -16,8 +16,38 @@ function SubCategory() {
       currentColor={currentColor}
       changeColor={setCurrentColor}
     />
-    <h2>Sub-categories</h2>
+    <h2>Subcategories</h2>
+    <br/>
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
     <Button onClick={() => navigate("/")} variant="primary">Back</Button>
+    </div>
+    <br/>
+    <div className="d-flex justify-content-center gap-3">
+    <Card style={{ width: '18rem' }}>
+      <Card.Body>
+        <Card.Title>Fitness Sub-categories</Card.Title>
+        <Card.Text>
+          Some text
+        </Card.Text>
+      </Card.Body>
+    </Card>
+    <Card style={{ width: '18rem' }}>
+      <Card.Body>
+        <Card.Title>Fitness</Card.Title>
+        <Card.Text>
+          Some text
+        </Card.Text>
+      </Card.Body>
+    </Card>
+    <Card style={{ width: '18rem' }}>
+      <Card.Body>
+        <Card.Title>Fitness</Card.Title>
+        <Card.Text>
+          Some text
+        </Card.Text>
+      </Card.Body>
+    </Card>
+  </div>
   </div>
     </>
   )

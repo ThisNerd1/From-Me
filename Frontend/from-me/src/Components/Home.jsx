@@ -12,7 +12,8 @@ function Home() {
       currentColor={currentColor}
       changeColor={setCurrentColor}
     />
-    <h1>Welcome</h1>
+    <h1>Please select a category</h1>
+    <br/>
     <Category />
   </div>
     </>

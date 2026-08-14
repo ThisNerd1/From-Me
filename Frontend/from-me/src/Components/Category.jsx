@@ -8,17 +8,57 @@ import { useNavigate } from "react-router";
 
 function Category() {
   let navigate = useNavigate();
+  function fitnessChoice() {
+    console.log("You clicked fitness!");
+    navigate("/Subcategory");
+  }
+  function careerChoice() {
+    console.log("You clicked career!");
+    navigate("/Subcategory");
+  }
+  function socialChoice() {
+    console.log("You clicked social!");
+    navigate("/Subcategory");
+  }
   return (
     <>
-     <Card style={{ width: '18rem' }}>
-      <Card.Body>
-        <Card.Title>Fitness</Card.Title>
-        <Card.Text>
-          Some text
-        </Card.Text>
-        <Button onClick={() => navigate("/Subcategory")} variant="primary">More Specific</Button>
-      </Card.Body>
-    </Card>
+    <div className="d-flex justify-content-center gap-3">
+  <Card style={{ width: '18rem' }}>
+    <Card.Body>
+      <Card.Title>Fitness</Card.Title>
+      <Card.Text>
+        Some text
+      </Card.Text>
+      {/* <Button onClick={() => navigate("/Subcategory")} variant="primary"> */}
+      <Button onClick={fitnessChoice} variant="primary">
+        More Specific
+      </Button>
+    </Card.Body>
+  </Card>
+  <Card style={{ width: '18rem' }}>
+    <Card.Body>
+      <Card.Title>Social</Card.Title>
+      <Card.Text>
+        Some text
+      </Card.Text>
+      <Button onClick={socialChoice} variant="primary">
+        More Specific
+      </Button>
+    </Card.Body>
+  </Card>
+
+  <Card style={{ width: '18rem' }}>
+    <Card.Body>
+      <Card.Title>Career</Card.Title>
+      <Card.Text>
+        Some text
+      </Card.Text>
+      <Button onClick={careerChoice} variant="primary">
+        More Specific
+      </Button>
+    </Card.Body>
+  </Card>
+</div>
     </>
   )
 }

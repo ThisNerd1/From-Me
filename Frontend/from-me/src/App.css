@@ -17,3 +17,7 @@ body{
 .bg-apricot{
   background: #F3A76B;
 }
+
+h1, h2{
+  text-align: center;
+}
