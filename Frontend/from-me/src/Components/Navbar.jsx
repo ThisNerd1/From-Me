@@ -1,48 +1,44 @@
 import { useState } from "react";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import App from "../App";
 
 
-function Navbar() { 
-  const [currentColor, setCurrentColor] = useState('bg-transparent');
-  function handleSelect(eventKey){
-    if(`${eventKey}` == "1"){
-      //change the color here
-      setCurrentColor('bg-apple');
-    }
-    if(`${eventKey}` == "2"){
-      //change the color here
-      setCurrentColor('bg-blueberry');
-    }
-    if(`${eventKey}` == "3"){
-      //change the color here
-      setCurrentColor('bg-lemon');
-    }
-    if(`${eventKey}` == "4"){
-      //change the color here
-      setCurrentColor('bg-apricot');
-    }
-    if(`${eventKey}` == "5"){
-      //change the color here
-      setCurrentColor('bg-black');
-    }
+function Navbar({changeColor}) { 
+  function handleSelect(eventKey) {
+  switch (eventKey) {
+    case "1":
+      changeColor("bg-apple");
+      break;
+    case "2":
+      changeColor("bg-blueberry");
+      break;
+    case "3":
+      changeColor("bg-lemon");
+      break;
+    case "4":
+      changeColor("bg-apricot");
+      break;
+    case "5":
+      changeColor("bg-black");
+      break;
   }
-  //console.log(handleSelect);
+}
   return (
-    <div className={`p-5 transition-all ${currentColor}`}>
+    <div className={`p-5 transition-all`}>
     <Nav activeKey="0" onSelect={handleSelect} className="justify-content-center">
       <Nav.Item>
-        <Nav.Link eventKey="homepage" href="#/home">
+        <Nav.Link eventKey="homepage" href="/">
           Home
         </Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="contact page" title="#/contact">
+        <Nav.Link eventKey="contact page" title="/contact">
           Contact
         </Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="profile page" title="#/profile">
+        <Nav.Link eventKey="profile page" title="/profile">
           Profile
         </Nav.Link>
       </Nav.Item>
