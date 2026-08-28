@@ -8,9 +8,12 @@ import { useNavigate } from "react-router";
 
 function Category() {
   let navigate = useNavigate();
+  const [selected, setSelected] = useState("");
   function fitnessChoice() {
-    console.log("You clicked fitness!");
-    navigate("/Subcategory");
+    navigate("/Subcategory", {
+      // Take this with you
+    state: { selected: "Fitness" }
+    });
   }
   function careerChoice() {
     console.log("You clicked career!");

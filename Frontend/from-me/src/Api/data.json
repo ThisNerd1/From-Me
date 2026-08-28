@@ -1,0 +1,29 @@
+{
+    "categories": 
+    [
+  { 
+    "id": 1, 
+    "category": "Fitness",
+    "title": "Pre-workout",
+    "text": "Before you workout and you're not really feeling it."
+  }, 
+  { 
+    "id": 2, 
+    "category": "Fitness",
+    "title": "Post-workout",
+    "text": "After you workout and you're feeling some kind of way about it."
+  },
+  { 
+    "id": 1, 
+    "category": "Social",
+    "title": "Networking",
+    "text": "How to, when to, if to."
+  },
+  { 
+    "id": 1, 
+    "category": "Career",
+    "title": "Post-workout",
+    "text": "After you workout and you're feeling some kind of way about it."
+  }
+]
+}
