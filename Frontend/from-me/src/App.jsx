@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Category" element={<Category />} />
-        <Route path="//Subcategory" element={<SubCategory />} />
+        <Route path="/Subcategory" element={<SubCategory />} />
       </Routes>
     </BrowserRouter>
     </>

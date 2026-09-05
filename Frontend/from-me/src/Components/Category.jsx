@@ -1,9 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
 import { useNavigate } from "react-router";
 
 function Category() {
@@ -12,16 +9,18 @@ function Category() {
   function fitnessChoice() {
     navigate("/Subcategory", {
       // Take this with you
-    state: { selected: "Fitness" }
+    state: {selected: "Fitness" }
     });
   }
   function careerChoice() {
-    console.log("You clicked career!");
-    navigate("/Subcategory");
+    navigate("/Subcategory", {
+    state: {selected: "Career" }
+    });
   }
   function socialChoice() {
-    console.log("You clicked social!");
-    navigate("/Subcategory");
+    navigate("/Subcategory", {
+    state: {selected: "Social" }
+    });
   }
   return (
     <>
@@ -32,7 +31,6 @@ function Category() {
       <Card.Text>
         Some text
       </Card.Text>
-      {/* <Button onClick={() => navigate("/Subcategory")} variant="primary"> */}
       <Button onClick={fitnessChoice} variant="primary">
         More Specific
       </Button>
@@ -49,7 +47,6 @@ function Category() {
       </Button>
     </Card.Body>
   </Card>
-
   <Card style={{ width: '18rem' }}>
     <Card.Body>
       <Card.Title>Career</Card.Title>

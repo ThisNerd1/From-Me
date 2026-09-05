@@ -14,16 +14,16 @@
     "text": "After you workout and you're feeling some kind of way about it."
   },
   { 
-    "id": 1, 
+    "id": 3, 
     "category": "Social",
     "title": "Networking",
     "text": "How to, when to, if to."
   },
   { 
-    "id": 1, 
+    "id": 4, 
     "category": "Career",
-    "title": "Post-workout",
-    "text": "After you workout and you're feeling some kind of way about it."
+    "title": "Random Junk",
+    "text": "Ya know it."
   }
 ]
 }
