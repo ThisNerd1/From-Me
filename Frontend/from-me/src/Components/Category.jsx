@@ -1,64 +1,35 @@
-import { useState } from "react";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import React, { useState, useEffect } from 'react';
+import { Card, Row, Col, Container } from "react-bootstrap";
 import { useNavigate } from "react-router";
+import Data from '../Api/data.json';
+
 
 function Category() {
   let navigate = useNavigate();
-  const [selected, setSelected] = useState("");
-  function fitnessChoice() {
+  //What does this do, write it down
+  const categoryData = [...new Map(Data.categories.map(item => [item.category, item])).values()];
+  //What does this do, write it down
+  function userChoice(item) {
     navigate("/Subcategory", {
-      // Take this with you
-    state: {selected: "Fitness" }
-    });
-  }
-  function careerChoice() {
-    navigate("/Subcategory", {
-    state: {selected: "Career" }
-    });
-  }
-  function socialChoice() {
-    navigate("/Subcategory", {
-    state: {selected: "Social" }
+      state: {selected: item.category}
     });
   }
   return (
     <>
-    <div className="d-flex justify-content-center gap-3">
-  <Card style={{ width: '18rem' }}>
-    <Card.Body>
-      <Card.Title>Fitness</Card.Title>
-      <Card.Text>
-        Some text
-      </Card.Text>
-      <Button onClick={fitnessChoice} variant="primary">
-        More Specific
-      </Button>
-    </Card.Body>
-  </Card>
-  <Card style={{ width: '18rem' }}>
-    <Card.Body>
-      <Card.Title>Social</Card.Title>
-      <Card.Text>
-        Some text
-      </Card.Text>
-      <Button onClick={socialChoice} variant="primary">
-        More Specific
-      </Button>
-    </Card.Body>
-  </Card>
-  <Card style={{ width: '18rem' }}>
-    <Card.Body>
-      <Card.Title>Career</Card.Title>
-      <Card.Text>
-        Some text
-      </Card.Text>
-      <Button onClick={careerChoice} variant="primary">
-        More Specific
-      </Button>
-    </Card.Body>
-  </Card>
-</div>
+    <Container className='d-flex vh-100 justify-content-center'>
+      <Row>
+        {categoryData.map((item, k) => (
+            <Col key={k}>
+              {/* How does this work? */}
+                <Card style={{ width: '18rem'}} onClick={() => userChoice(item)}>
+                    <Card.Body>
+                        <Card.Title>{item.category}</Card.Title>
+                    </Card.Body>
+                  </Card>
+              </Col>
+            ))}
+        </Row>
+    </Container>
     </>
   )
 }

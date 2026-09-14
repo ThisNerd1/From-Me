@@ -14,7 +14,13 @@ function SubCategory() {
   //Checks if the card the user clicks is the same one, both says the same thing
   //console.log(location.state.selected);
   const specificData = Data.categories.filter(item => item.category === location.state.selected);
-  console.log(specificData);
+  //console.log(specificData);
+  function selectedChoice() {
+    navigate("/Download", {
+    //I want whatever choice the user picked
+    //state: {selected: "Fitness" }
+    });
+  }
   return (
     <>
      <div className={`${currentColor} min-vh-100`}>
@@ -32,7 +38,7 @@ function SubCategory() {
       <Row>
         {specificData.map((item, k) => (
             <Col key={k}>
-                <Card style={{ width: '18rem'}}>
+                <Card style={{ width: '18rem'}} onClick={selectedChoice}>
                     <Card.Body>
                         <Card.Title>{item.title}</Card.Title>
                         <Card.Text>{item.text}</Card.Text>

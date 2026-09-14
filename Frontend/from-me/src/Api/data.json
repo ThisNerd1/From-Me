@@ -5,25 +5,25 @@
     "id": 1, 
     "category": "Fitness",
     "title": "Pre-workout",
-    "text": "Before you workout and you're not really feeling it."
+    "text": "For before you workout."
   }, 
   { 
     "id": 2, 
     "category": "Fitness",
     "title": "Post-workout",
-    "text": "After you workout and you're feeling some kind of way about it."
+    "text": "For after you workout."
   },
   { 
     "id": 3, 
     "category": "Fitness",
     "title": "Active-workout",
-    "text": "One...More....Rep!"
+    "text": "Keep Going, One More Rep."
   },
   { 
     "id": 4, 
     "category": "Social",
     "title": "Networking",
-    "text": "How to, when to, if to."
+    "text": "Professional connections."
   },
   { 
     "id": 5, 
