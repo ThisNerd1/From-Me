@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Category from './Components/Category';
 import SubCategory from './Components/SubCategory';
+import Contact from './Components/Contact';
 import Home from './Components/Home';
 import './App.css'
 
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Category" element={<Category />} />
         <Route path="/Subcategory" element={<SubCategory />} />
+        <Route path="/Contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
     </>

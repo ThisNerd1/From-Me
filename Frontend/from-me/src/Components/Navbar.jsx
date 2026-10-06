@@ -33,7 +33,7 @@ function Navbar({changeColor}) {
         </Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="contact page" title="/contact">
+        <Nav.Link eventKey="contact page" href="/contact">
           Contact
         </Nav.Link>
       </Nav.Item>
