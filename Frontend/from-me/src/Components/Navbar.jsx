@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import App from "../App";
 
 
 function Navbar({changeColor}) { 
@@ -38,7 +37,7 @@ function Navbar({changeColor}) {
         </Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="profile page" title="/profile">
+        <Nav.Link eventKey="profile page" href="/profile">
           Profile
         </Nav.Link>
       </Nav.Item>
